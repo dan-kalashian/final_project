@@ -57,3 +57,11 @@ with open("WordScrapbook.txt", "a") as Scrapbook:
 with open ("WordScrapbook.txt", "r") as file:
     contents = file.read()
     print("Here is your scrapbook! " + contents)
+
+#Also here is the gramatic structure of the words explained inside tuples. 
+words = ("the", "man", "went", "to", "the", "store")
+(article, subject, verb, preposition, preposition_article, object_of_the_preposition) = ("the", "man", "went", "to", "the", "store")
+print("I want to find out what the verb of this sentence is, so I will use the tuple!")
+print("The verb is: " + verb)
+print("Now I want to find out what the subject is")
+print("The subject is: "+ subject)
