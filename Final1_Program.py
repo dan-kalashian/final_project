@@ -80,3 +80,14 @@ print(grocery.get_text())
 #print("Here is your scrapbook! " + contents + "Then the man thought of the quote: " + new)
 
 #API English class?
+print("still interested in learning about grammar and writing? Take a look at the UMD Enlgish courses below!")
+import json
+import requests
+import re
+umd_request = requests.get("https://api.umd.io/v1/courses?dept_id=ENGL")
+umd_data=json.loads(umd_request.content)
+for course in umd_data:
+    course_id = course["course_id"]
+    dept_id = course["dept_id"]
+    if dept_id=='ENGL':
+        print(f"{course['course_id']}: {course['name']}")
